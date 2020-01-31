@@ -1,0 +1,40 @@
+#carre{
+    padding:50px;
+    background-color: #fff;
+    animation-name: rotationCarre;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotationCarre{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(180deg);
+    }
+}
+
+
+#balle{ 
+    padding:15px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#loader div{
+    padding:30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#queue div{
+    padding:5px;
+    background-color: #fff;
+    border:1px solid black;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
