@@ -1,3 +1,5 @@
+/*///////////// C A R R E  Q U I  T O U R N E /////////////*/
+
 #carre{
     padding:50px;
     background-color: #fff;
@@ -16,18 +18,41 @@
     }
 }
 
+/*///////////// B A L L E  Q U I  R E B O N D I T /////////////*/
 
 #balle{ 
-    padding:15px;
+    padding:10px;
     border-radius: 50%;
     background-color: #fff;
+    animation-name: rebond;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+  
+    
+   
+ 
 }
+
+@keyframes rebond{
+    0%{top:-100px;transition-timing-function: ease-out;}
+    20%{top:100px;transition-timing-function: ease-in;}
+    40%{top:0px;transition-timing-function: ease-out;}
+    60%{top:100px;transition-timing-function: ease-in;}
+    80%{top:50px;transition-timing-function: ease-out;}
+    100%{top:100px;transition-timing-function: ease-in;}
+}
+
+/*///////////// L O A D E R /////////////*/
 
 #loader div{
     padding:30px;
     border-radius: 50%;
     background-color: #fff;
 }
+
+
+
 
 #queue div{
     padding:5px;
@@ -37,4 +62,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+aside{
+   
+   
+}
+aside:hover{
+    height:200px;
 }

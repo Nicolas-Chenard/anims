@@ -14,11 +14,16 @@ aside{
 main{
     background-color: rgb(78, 184, 52);
     width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height:100vh
 }
 section{
     background-color: rgb(153, 149, 149);
     border: 1px solid black;
-    width: 300px;
+    width: 500px;
     height: 200px;
     display: flex;
     justify-content: center;
