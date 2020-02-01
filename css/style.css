@@ -5,32 +5,53 @@
 body{
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items:center;
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    
 }
 aside{
-    background-color: rgb(153, 35, 35);
     width:80px;
 }
+
 main{
-    background-color: rgb(78, 184, 52);
-    width:100%;
+    max-width:1280px;
+    min-width: 1020px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    height:100vh
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;    
 }
 section{
-    background-color: rgb(153, 149, 149);
-    border: 1px solid black;
-    width: 500px;
+    background-color: rgb(114, 107, 107);
+    width: 323px;
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+}
+
+h2{
+    position: absolute;
+    align-self: flex-start;
+    margin-top: -15px;
+    color: blanchedalmond;
     
 }
-section p{
-    position:absolute;
-    /* top:50px; */
+
+#anim3d{
+    
+    height: 400px;
+   
+    position: relative;
+    top:100px;
+}
+
+
+#menu{
+    position: absolute;
+    top:0px;
+    left:0px;
+    color: red;
+    
 }

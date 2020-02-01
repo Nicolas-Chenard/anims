@@ -19,7 +19,9 @@
 }
 
 /*///////////// B A L L E  Q U I  R E B O N D I T /////////////*/
-
+#rebondit{
+    overflow: hidden;
+}
 #balle{ 
     padding:10px;
     border-radius: 50%;
@@ -28,19 +30,19 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     position: relative;
-  
+ 
     
    
  
 }
 
 @keyframes rebond{
-    0%{top:-100px;transition-timing-function: ease-out;}
-    20%{top:100px;transition-timing-function: ease-in;}
-    40%{top:0px;transition-timing-function: ease-out;}
-    60%{top:100px;transition-timing-function: ease-in;}
-    80%{top:50px;transition-timing-function: ease-out;}
-    100%{top:100px;transition-timing-function: ease-in;}
+    0%{top:-100px;width:5px; height:5px;transition-timing-function: ease-out;}
+    20%{top:0px;width:5px; height:5px;transition-timing-function: ease-in;}
+    40%{top:-50px;width:15px; height:15px;transition-timing-function: ease-out;}
+    60%{top:50px;width:15px; height:15px;transition-timing-function: ease-in;}
+    80%{top:30px;width:40px; height:40px;transition-timing-function: ease-out;}
+    100%{top:140px;width:60px; height:60px;transition-timing-function: ease-in;}
 }
 
 /*///////////// L O A D E R /////////////*/
@@ -49,6 +51,25 @@
     padding:30px;
     border-radius: 50%;
     background-color: #fff;
+    animation-name: loadAnim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+
+#load1{
+    animation-delay: 1s
+}
+#load2{
+    animation-delay: 2s
+}
+#load3{
+    animation-delay: 3s;
+}
+
+@keyframes loadAnim{
+    0%{opacity: 100;}
+    100%{opacity:0}
 }
 
 
