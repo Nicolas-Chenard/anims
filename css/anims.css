@@ -24,25 +24,28 @@
 }
 #balle{ 
     padding:10px;
-    border-radius: 50%;
+  
+    /* border-radius: 50%; */
     background-color: #fff;
     animation-name: rebond;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     position: relative;
- 
+    background-image: url('../img/crane.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
     
    
  
 }
 
 @keyframes rebond{
-    0%{top:-100px;width:5px; height:5px;transition-timing-function: ease-out;}
-    20%{top:0px;width:5px; height:5px;transition-timing-function: ease-in;}
-    40%{top:-50px;width:15px; height:15px;transition-timing-function: ease-out;}
-    60%{top:50px;width:15px; height:15px;transition-timing-function: ease-in;}
-    80%{top:30px;width:40px; height:40px;transition-timing-function: ease-out;}
-    100%{top:140px;width:60px; height:60px;transition-timing-function: ease-in;}
+    0%{top:-100px;width:15px; height:15px;transform:rotate(0deg);transition-timing-function: ease-out;}
+    20%{top:0px;width:15px; height:15px;transform:rotate(0deg);transition-timing-function: ease-in;}
+    40%{top:-50px;width:35px; height:35px;transform:rotate(180deg);transition-timing-function: ease-out;}
+    60%{top:50px;width:35px; height:35px;transform:rotate(180deg);transition-timing-function: ease-in;}
+    80%{top:30px;width:70px; height:70px;transform:rotate(360deg);transition-timing-function: ease-out;}
+    100%{top:140px;width:100px; height:100px;transform:rotate(360deg);transition-timing-function: ease-in;}
 }
 
 /*///////////// L O A D E R /////////////*/
@@ -73,17 +76,71 @@
 }
 
 
-
+/*///////////// Q U E U E /////////////*/
 
 #queue div{
-    padding:5px;
+   
+    width:30px;
+    height:30px;
     background-color: #fff;
     border:1px solid black;
     font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    animation-name: queueAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    
+ 
+    
+   
+ 
 }
+
+@keyframes queueAnim{
+
+    0%{transform: translate(-50px, -70px) rotate(0deg);
+        background-color: #fff;
+    }
+    25%{transform: translate(210px,-70px) rotate(360deg);
+        background-color: rgb(255, 0, 0);
+    }
+    50%{transform: translate(210px,70px) rotate(0deg);
+        background-color: #333;
+    }
+    75%{transform: translate(-50px,70px) rotate(360deg);
+        background-color: #eee;
+    }
+    100%{transform: translate(-50px, -70px) rotate(0deg);
+        background-color: #111;
+    }
+}
+
+
+#queue div:nth-of-type(1){
+    left:0px;
+    animation-delay: 2.5s;
+}
+#queue div:nth-of-type(2){
+    left:-32px;
+    animation-delay: 2s;
+}
+#queue div:nth-of-type(3){
+    left:-64px;
+    animation-delay: 1.5s;
+}
+#queue div:nth-of-type(4){
+    left:-96px;
+    animation-delay: 1s;
+}
+#queue div:nth-of-type(5){
+    left:-128px;
+    animation-delay: 0.5s;
+}
+#queue div:nth-of-type(6){
+    left:-160px;
+    animation-delay: 0s;
+}
+
 aside{
    
    
@@ -91,3 +148,5 @@ aside{
 aside:hover{
     height:200px;
 }
+
+/* ////////// A N I M   3 D  ///////////*/
