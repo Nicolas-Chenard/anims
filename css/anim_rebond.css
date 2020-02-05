@@ -1,0 +1,65 @@
+/* exercice d'intégration/animation - Nicolas Chenard 2020 */
+
+/*///////////// B A L L E  Q U I  R E B O N D I T /////////////*/
+#rebondit{
+  overflow: hidden;
+  background-image: url('../img/unnamed.gif');
+  background-size: 100% 100%;
+}
+#balle{ 
+  padding:10px;
+  animation-name: rebond;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  background-image: url('../img/crane.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation-timing-function: steps(12,end);
+}
+
+@keyframes rebond{
+  0%{
+      left:120px;
+      top:-150px;
+      width:0px; 
+      height:0px;
+      transform:rotate(0deg);
+  }
+  20%{
+      left:120px;
+      top:-60px;
+      width:0px; 
+      height:0px;
+      transform:rotate(0deg);
+  }
+  40%{
+      left:60px;
+      top:-100px;
+      width:10px; 
+      height:10px;
+      transform:rotate(180deg);
+  }
+  60%{
+      left:60px;
+      top:-25px;
+      width:10px; 
+      height:10px;
+      transform:rotate(180deg);
+  }
+  80%{
+      left:0px;
+      top:-60px;
+      width:15px; 
+      height:15px;
+      transform:rotate(360deg);
+  }
+  100%{
+      left:0px;
+      top:140px;
+      width:15px; 
+      height:15px;
+      transform:rotate(360deg);
+  }
+}

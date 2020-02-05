@@ -1,0 +1,29 @@
+/* exercice d'intégration/animation - Nicolas Chenard 2020 */
+
+/*///////////// C A R R E  Q U I  T O U R N E /////////////*/
+#carreTourne{
+  background-image: url('../img/owl1.png');
+  background-size: 100% 100%;
+}
+#carre{
+  width:45px;
+  height:45px;
+  position: relative;
+  top:-10px;
+  animation-name: rotationCarre;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-image: url('../img/owl2.png');
+  background-size: 100% 100%;
+
+}
+
+@keyframes rotationCarre{
+  from{
+      transform:rotate(-70deg);
+  }
+  to{
+      transform:rotate(70deg);
+  }
+}

@@ -1,0 +1,106 @@
+ /* exercice d'intégration/animation - Nicolas Chenard 2020 */
+
+/* ////////// C A R R O U S E L  ///////////*/
+
+#container-carrousel{
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 80px;
+    left: 110px;
+ 
+    animation: se_cogne_a_la_parroie 4s infinite linear;
+}
+
+#caroussel{
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 80px;
+    left: 110px;
+    animation: tourne_sur_lui_meme 2s infinite linear;
+    
+}
+
+#caroussel div{
+	height: 5px;
+	width: 10px;
+	padding: 10px 30px;
+    position: absolute;
+    background-image: url('../img/os.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#caroussel div:nth-of-type(1){
+    transform: rotateY(0deg) translateZ(48px);
+}
+
+#caroussel div:nth-of-type(2){
+    transform: rotateY(72deg) translateZ(48px);
+}
+
+#caroussel div:nth-of-type(3){
+    transform: rotateY(144deg) translateZ(48px) ;
+}
+
+#caroussel div:nth-of-type(4){
+    transform: rotateY(216deg) translateZ(48px); 
+}
+
+#caroussel div:nth-of-type(5){
+    transform: rotateY(288deg) translateZ(48px);
+}
+
+
+#caroussel div:nth-of-type(6){
+    
+    padding: 30px 30px;
+    top:-20px; 
+    background-image: url('../img/pentagramme.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform:rotateX(90deg);
+}
+
+@keyframes tourne_sur_lui_meme{
+
+	0%{
+        transform: rotateY(360deg) ;     
+    }
+    100%{
+        transform: rotateY(0deg) ;   
+    }
+}
+
+@keyframes se_cogne_a_la_parroie{
+
+	100%{
+        transform: rotateY(0deg) rotateX(0deg);
+        top: -75px;
+        left: 20px;
+    }
+
+    75%{
+        transform: rotateY(90deg) rotateX(90deg);
+        top: 160px;
+        left: 205px;
+    }
+
+    50%{
+        transform: rotateY(180deg) rotateX(180deg);
+        top: 425px;
+        left: 315px;
+    }
+
+    25%{
+        transform: rotateY(270deg) rotateX(270deg);
+        top: 160px;
+        left: -75px;
+    }
+
+	0%{
+        transform: rotateY(360deg) rotateX(360deg);
+        top: -75px;
+        left: 20px;
+    } 
+}
